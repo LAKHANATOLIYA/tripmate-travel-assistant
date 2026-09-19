@@ -9,6 +9,8 @@ WEATHER_DATA: Dict[str, Dict[str, Dict[str, object]]] = {
         "january": {"conditions": "cold and dry, with occasional clear skies", "temp_range_c": [1, 8]},
         "february": {"conditions": "cool and dry, pleasant for city walks", "temp_range_c": [2, 10]},
         "march": {"conditions": "cool with springlike weather", "temp_range_c": [6, 15]},
+        "july": {"conditions": "hot and humid with frequent rain showers", "temp_range_c": [25, 31]},
+        "august": {"conditions": "hot and humid with tropical summer weather", "temp_range_c": [26, 32]},
         "summer": {"conditions": "hot and humid with occasional rain", "temp_range_c": [22, 31]},
     },
     "bangkok": {
@@ -16,6 +18,8 @@ WEATHER_DATA: Dict[str, Dict[str, Dict[str, object]]] = {
         "january": {"conditions": "cooler and more comfortable than the hot season", "temp_range_c": [25, 33]},
         "february": {"conditions": "warm and dry, generally pleasant", "temp_range_c": [26, 34]},
         "march": {"conditions": "hot and humid before the monsoon", "temp_range_c": [28, 35]},
+        "july": {"conditions": "very hot and humid with daily rain showers", "temp_range_c": [28, 34]},
+        "august": {"conditions": "very hot and humid with tropical downpours", "temp_range_c": [28, 34]},
         "summer": {"conditions": "very hot and humid", "temp_range_c": [28, 36]},
     },
     "barcelona": {
@@ -23,6 +27,8 @@ WEATHER_DATA: Dict[str, Dict[str, Dict[str, object]]] = {
         "january": {"conditions": "cool and crisp, often clear", "temp_range_c": [7, 14]},
         "february": {"conditions": "cool and slightly wetter than other months", "temp_range_c": [8, 16]},
         "march": {"conditions": "mild with spring warmth developing", "temp_range_c": [10, 18]},
+        "july": {"conditions": "hot and crowded with long sunny days", "temp_range_c": [24, 30]},
+        "august": {"conditions": "hot and crowded, especially in peak summer", "temp_range_c": [25, 31]},
         "summer": {"conditions": "hot and crowded, especially in July and August", "temp_range_c": [25, 30]},
     },
     "reykjavik": {
@@ -30,6 +36,8 @@ WEATHER_DATA: Dict[str, Dict[str, Dict[str, object]]] = {
         "january": {"conditions": "very cold and windy with short daylight hours", "temp_range_c": [-6, 1]},
         "february": {"conditions": "cold, windy, and icy with possible snow", "temp_range_c": [-5, 2]},
         "march": {"conditions": "cold and variable with improving daylight", "temp_range_c": [-3, 4]},
+        "july": {"conditions": "mild weather with long daylight and occasional rain", "temp_range_c": [9, 15]},
+        "august": {"conditions": "mild weather with long daylight and cool evenings", "temp_range_c": [8, 14]},
         "summer": {"conditions": "mild weather with long daylight and occasional rain", "temp_range_c": [9, 15]},
     },
 }
