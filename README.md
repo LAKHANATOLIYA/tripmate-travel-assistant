@@ -194,7 +194,7 @@ I can help with travel questions about destination info, visa rules, local custo
 
 - The destination knowledge base is local and static, so an in-memory similarity search is enough for this assessment.
 - The weather data is intentionally implemented as a small mock table to keep the project reliable and easy to test.
-- The orchestration logic is intentionally rule-based rather than a black-box LLM router, because this project is meant to be deterministic, explainable, and testable.
+- The orchestration logic is intentionally implemented as a deterministic tool router, because this project is meant to be transparent, explainable, and testable without requiring an external LLM provider.
 - The agent is built to be transparent: every tool decision and relevant reasoning step is logged.
 
 ## Known limitations
@@ -211,6 +211,7 @@ I can help with travel questions about destination info, visa rules, local custo
 - Move from a simple in-memory search to a vector database such as FAISS or Chroma.
 - Precompute embeddings offline for each chunk.
 - Add metadata filters such as city, category, and language.
+- If a hosted LLM or external provider is introduced later, the same tool interfaces can be preserved while swapping the planner implementation.
 
 ### Avoiding redundant tool calls
 

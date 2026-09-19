@@ -1,12 +1,36 @@
+import importlib
+
 import pytest
 
+from tripmate import config
 from tripmate.agent import TripMateAgent
+
+
+def test_provider_configuration_can_be_overridden(monkeypatch):
+    monkeypatch.setenv("LLM_PROVIDER", "mock_llm")
+    monkeypatch.setenv("WEATHER_DATA_SOURCE", "live_api")
+    importlib.reload(config)
+    assert config.settings.llm_provider == "mock_llm"
+    assert config.settings.weather_data_source == "live_api"
+    importlib.reload(config)
 
 
 def test_tool_selection_single_tool():
     agent = TripMateAgent()
     selected = agent.select_tools("What are the visa rules for Bangkok?")
     assert selected == ["destination_guide"]
+
+
+def test_tool_selection_destination_only_for_visa_query():
+    agent = TripMateAgent()
+    selected = agent.select_tools("What are the visa rules for Bangkok?")
+    assert selected == ["destination_guide"]
+
+
+def test_tool_selection_weather_only_for_weather_query():
+    agent = TripMateAgent()
+    selected = agent.select_tools("How cold is Reykjavik in January?")
+    assert selected == ["weather"]
 
 
 def test_tool_selection_multi_tool():
